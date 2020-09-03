@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.xghk416.pojo.dao.ArkOperatorSkillDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.project.xghk416.pojo.po.ArkOperatorSkillPo">
+        <id column="id" property="id" />
+        <result column="skill_id" property="skillId" />
+        <result column="operator_index" property="operatorIndex" />
+        <result column="skill_position" property="skillPosition" />
+        <result column="skill_name" property="skillName" />
+        <result column="skill_pic" property="skillPic" />
+        <result column="recover_type" property="recoverType" />
+        <result column="release_type" property="releaseType" />
+        <result column="is_passive" property="isPassive" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, skill_id, operator_index, skill_position, skill_name, skill_pic, recover_type, release_type, is_passive
+    </sql>
+
+</mapper>

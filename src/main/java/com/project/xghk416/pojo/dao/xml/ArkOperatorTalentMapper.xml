@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.xghk416.pojo.dao.ArkOperatorTalentDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.project.xghk416.pojo.po.ArkOperatorTalentPo">
+        <id column="id" property="id" />
+        <result column="operator_name" property="operatorName" />
+        <result column="operator_index" property="operatorIndex" />
+        <result column="condition" property="condition" />
+        <result column="talent_name" property="talentName" />
+        <result column="talent_position" property="talentPosition" />
+        <result column="talent_des" property="talentDes" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, operator_name, operator_index, condition, talent_name, talent_position, talent_des
+    </sql>
+
+</mapper>

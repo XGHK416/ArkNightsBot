@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.xghk416.pojo.dao.ArkOperatorPotentialDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.project.xghk416.pojo.po.ArkOperatorPotentialPo">
+        <id column="id" property="id" />
+        <result column="potential_rank" property="potentialRank" />
+        <result column="operator_id" property="operatorId" />
+        <result column="effect" property="effect" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, potential_rank, operator_id, effect
+    </sql>
+
+</mapper>

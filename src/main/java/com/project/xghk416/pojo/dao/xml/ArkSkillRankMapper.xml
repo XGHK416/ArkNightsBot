@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.xghk416.pojo.dao.ArkSkillRankDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.project.xghk416.pojo.po.ArkSkillRankPo">
+        <id column="id" property="id" />
+        <result column="operator_index" property="operatorIndex" />
+        <result column="skill_id" property="skillId" />
+        <result column="skill_rank" property="skillRank" />
+        <result column="skill_des" property="skillDes" />
+        <result column="skill_ori" property="skillOri" />
+        <result column="skill_consume" property="skillConsume" />
+        <result column="skill_keep" property="skillKeep" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, operator_index, skill_id, skill_rank, skill_des, skill_ori, skill_consume, skill_keep
+    </sql>
+
+</mapper>

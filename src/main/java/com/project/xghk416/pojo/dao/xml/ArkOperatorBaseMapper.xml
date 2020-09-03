@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.xghk416.pojo.dao.ArkOperatorBaseDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.project.xghk416.pojo.po.ArkOperatorBasePo">
+        <id column="id" property="id" />
+        <result column="operator_cn" property="operatorCn" />
+        <result column="operator_position" property="operatorPosition" />
+        <result column="operator_en" property="operatorEn" />
+        <result column="operator_sex" property="operatorSex" />
+        <result column="operator_tag" property="operatorTag" />
+        <result column="operator_race" property="operatorRace" />
+        <result column="operator_rarity" property="operatorRarity" />
+        <result column="operator_class" property="operatorClass" />
+        <result column="operator_approach" property="operatorApproach" />
+        <result column="operator_camp" property="operatorCamp" />
+        <result column="operator_team" property="operatorTeam" />
+        <result column="operator_des" property="operatorDes" />
+        <result column="operator_feature" property="operatorFeature" />
+        <result column="operator_str" property="operatorStr" />
+        <result column="operator_flex" property="operatorFlex" />
+        <result column="operator_tolerance" property="operatorTolerance" />
+        <result column="operator_plan" property="operatorPlan" />
+        <result column="operator_skill" property="operatorSkill" />
+        <result column="operator_adapt" property="operatorAdapt" />
+        <result column="operator_moredes" property="operatorMoredes" />
+        <result column="operator_icon" property="operatorIcon" />
+        <result column="operator_half" property="operatorHalf" />
+        <result column="operator_oriHp" property="operatorOrihp" />
+        <result column="operator_oriAtk" property="operatorOriatk" />
+        <result column="operator_oriDef" property="operatorOridef" />
+        <result column="operator_oriRes" property="operatorOrires" />
+        <result column="operator_oriDt" property="operatorOridt" />
+        <result column="operator_oriDc" property="operatorOridc" />
+        <result column="operator_oriBlock" property="operatorOriblock" />
+        <result column="operator_oriCd" property="operatorOricd" />
+        <result column="operator_index" property="operatorIndex" />
+        <result column="operator_sort_id" property="operatorSortId" />
+        <result column="operator_jp" property="operatorJp" />
+        <result column="operator_birthplace" property="operatorBirthplace" />
+    </resultMap>
+    <resultMap id="BaseAttribute" type="com.project.xghk416.pojo.po.ArkOperatorBasePo">
+        <id column="id" property="id" />
+        <result column="operator_cn" property="operatorCn" />
+        <result column="operator_position" property="operatorPosition" />
+        <result column="operator_en" property="operatorEn" />
+        <result column="operator_sex" property="operatorSex" />
+        <result column="operator_tag" property="operatorTag" />
+        <result column="operator_race" property="operatorRace" />
+        <result column="operator_rarity" property="operatorRarity" />
+        <result column="operator_class" property="operatorClass" />
+        <result column="operator_approach" property="operatorApproach" />
+        <result column="operator_camp" property="operatorCamp" />
+        <result column="operator_team" property="operatorTeam" />
+        <result column="operator_des" property="operatorDes" />
+        <result column="operator_feature" property="operatorFeature" />
+        <result column="operator_str" property="operatorStr" />
+        <result column="operator_flex" property="operatorFlex" />
+        <result column="operator_tolerance" property="operatorTolerance" />
+        <result column="operator_plan" property="operatorPlan" />
+        <result column="operator_skill" property="operatorSkill" />
+        <result column="operator_adapt" property="operatorAdapt" />
+        <result column="operator_moredes" property="operatorMoredes" />
+        <result column="operator_icon" property="operatorIcon" />
+        <result column="operator_half" property="operatorHalf" />
+        <result column="operator_oriHp" property="operatorOrihp" />
+        <result column="operator_oriAtk" property="operatorOriatk" />
+        <result column="operator_oriDef" property="operatorOridef" />
+        <result column="operator_oriRes" property="operatorOrires" />
+        <result column="operator_oriDt" property="operatorOridt" />
+        <result column="operator_oriDc" property="operatorOridc" />
+        <result column="operator_oriBlock" property="operatorOriblock" />
+        <result column="operator_oriCd" property="operatorOricd" />
+        <result column="operator_index" property="operatorIndex" />
+        <result column="operator_sort_id" property="operatorSortId" />
+        <result column="operator_jp" property="operatorJp" />
+        <result column="operator_birthplace" property="operatorBirthplace" />
+        <collection property="attribute" ofType="com.project.xghk416.pojo.po.ArkOperatorAttributePo">
+
+        </collection>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, operator_cn, operator_position, operator_en, operator_sex, operator_tag, operator_race, operator_rarity, operator_class, operator_approach, operator_camp, operator_team, operator_des, operator_feature, operator_str, operator_flex, operator_tolerance, operator_plan, operator_skill, operator_adapt, operator_moredes, operator_icon, operator_half, operator_oriHp, operator_oriAtk, operator_oriDef, operator_oriRes, operator_oriDt, operator_oriDc, operator_oriBlock, operator_oriCd, operator_index, operator_sort_id, operator_jp, operator_birthplace
+    </sql>
+    <select id="getBaseAttribute" resultMap="BaseResultMap">
+        SELECT
+            ark_operator_base.*,
+        FROM
+            ark_operator_attribute
+        WHERE
+            ark_operator_attribute.operator_name = #{name}
+    </select>
+
+</mapper>

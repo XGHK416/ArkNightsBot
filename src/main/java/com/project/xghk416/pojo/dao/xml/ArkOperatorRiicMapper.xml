@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.xghk416.pojo.dao.ArkOperatorRiicDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.project.xghk416.pojo.po.ArkOperatorRiicPo">
+        <id column="id" property="id" />
+        <result column="operator_index" property="operatorIndex" />
+        <result column="riic_name" property="riicName" />
+        <result column="riic_pic" property="riicPic" />
+        <result column="riic_condition" property="riicCondition" />
+        <result column="riic_room" property="riicRoom" />
+        <result column="riic_des" property="riicDes" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, operator_index, riic_name, riic_pic, riic_condition, riic_room, riic_des
+    </sql>
+
+</mapper>
